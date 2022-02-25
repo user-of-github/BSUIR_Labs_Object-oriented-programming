@@ -14,6 +14,10 @@ public class Smartphone extends PortableComputer {
     }
 
     public String toString() {
-        return String.format("%s\nHas Google Apps: %b", super.toString(), this.hasGoogleApps);
+        return String.format(
+                "%s\nHas Google Apps: %b",
+                super.toString(),
+                this.hasGoogleApps
+        );
     }
 }

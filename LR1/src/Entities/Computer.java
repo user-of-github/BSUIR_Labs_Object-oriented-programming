@@ -1,7 +1,8 @@
 package Entities;
 
 public abstract class Computer {
-    private static final String DefaultCurrency = "BYN";
+    protected static final String DefaultCurrency = "BYN";
+    protected static final String DefaultValue = "Unknown";
 
     private String manufacturer;
     private String model;
@@ -10,8 +11,8 @@ public abstract class Computer {
 
 
     protected Computer() {
-        this.manufacturer = "Unknown";
-        this.model = "Unknown";
+        this.manufacturer = Computer.DefaultValue;
+        this.model = Computer.DefaultValue;
         this.price = 0.00;
         this.operatingSystem = OperatingSystem.NoOS;
     }
@@ -42,7 +43,11 @@ public abstract class Computer {
     public String toString() {
         return String.format(
                 "Manufacturer: %s\nModel: %s\nPrice: %.2f %s\nOS: %s",
-                this.manufacturer, this.model, this.price, Computer.DefaultCurrency, this.operatingSystem.name()
+                this.manufacturer,
+                this.model,
+                this.price,
+                Computer.DefaultCurrency,
+                this.operatingSystem.name()
         );
     }
 }

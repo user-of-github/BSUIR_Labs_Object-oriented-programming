@@ -14,6 +14,10 @@ public class Laptop extends PortableComputer {
     }
 
     public String toString() {
-        return String.format("Weight: %f\n%s", this.weight, super.toString());
+        return String.format(
+                "%s\nWeight: %s",
+                super.toString(),
+                this.weight == 0.0 ? Computer.DefaultValue : String.valueOf(this.weight)
+        );
     }
 }

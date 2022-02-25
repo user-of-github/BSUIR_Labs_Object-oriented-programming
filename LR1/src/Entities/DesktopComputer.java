@@ -14,6 +14,10 @@ public abstract class DesktopComputer extends Computer {
     }
 
     public String toString() {
-        return String.format("%s\nRequired power voltage: %d", super.toString(), this.powerVoltage);
+        return String.format(
+                "%s\nRequired power voltage: %s",
+                super.toString(),
+                this.powerVoltage == 0.00 ? Computer.DefaultValue : String.valueOf(this.powerVoltage)
+        );
     }
 }

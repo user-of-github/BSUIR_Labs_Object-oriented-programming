@@ -14,6 +14,10 @@ public class Smartwatch extends PortableComputer {
     }
 
     public String toString() {
-        return String.format("%s\nAbility to control health (pulse and so on): %b", super.toString(), this.canControlHealth);
+        return String.format(
+                "%s\nAbility to control health (pulse and so on): %b",
+                super.toString(),
+                this.canControlHealth
+        );
     }
 }
