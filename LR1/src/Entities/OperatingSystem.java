@@ -1,10 +1,12 @@
 package Entities;
 
-public enum OperatingSystemType {
+public enum OperatingSystem {
     Windows,
     Android,
+    HarmonyOS,
     IOS,
     WindowsPhone,
+    TizenOS,
     MacOS,
     Linux,
     DOS,

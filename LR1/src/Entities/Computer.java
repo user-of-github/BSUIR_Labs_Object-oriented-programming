@@ -1,19 +1,48 @@
 package Entities;
 
 public abstract class Computer {
+    private static final String DefaultCurrency = "BYN";
+
     private String manufacturer;
     private String model;
     private double price;
-    private OperatingSystemType operatingSystem;
+    private OperatingSystem operatingSystem;
 
-    protected Computer(String manufacturer, String model, double price, OperatingSystemType os) {
+
+    protected Computer() {
+        this.manufacturer = "Unknown";
+        this.model = "Unknown";
+        this.price = 0.00;
+        this.operatingSystem = OperatingSystem.NoOS;
+    }
+
+    protected Computer(String manufacturer, String model, double price, OperatingSystem os) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.price = price;
         this.operatingSystem = os;
     }
 
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setOperatingSystem(OperatingSystem operatingSystem) {
+        this.operatingSystem = operatingSystem;
+    }
+
     public String toString() {
-        return String.format("Manufacturer: %s\nModel: %s\nPrice: %f\nOS: %s", this.manufacturer, this.model, this.price, this.operatingSystem.name());
+        return String.format(
+                "Manufacturer: %s\nModel: %s\nPrice: %.2f %s\nOS: %s",
+                this.manufacturer, this.model, this.price, Computer.DefaultCurrency, this.operatingSystem.name()
+        );
     }
 }
