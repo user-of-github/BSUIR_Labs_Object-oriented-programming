@@ -1,4 +1,6 @@
-package Entities;
+package computers;
+
+import Factory.ComputerType;
 
 public class Laptop extends PortableComputer {
     private double weight;
@@ -11,6 +13,11 @@ public class Laptop extends PortableComputer {
     public Laptop() {
         super();
         this.weight = 0.00;
+    }
+
+    @Override
+    public ComputerType getComputerType() {
+        return ComputerType.LAPTOP;
     }
 
     public String toString() {

@@ -1,4 +1,4 @@
-package Entities;
+package computers;
 
 public abstract class PortableComputer extends Computer {
     private byte batteryLifeHours;

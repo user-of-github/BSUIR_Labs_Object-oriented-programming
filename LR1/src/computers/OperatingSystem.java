@@ -1,4 +1,4 @@
-package Entities;
+package computers;
 
 public enum OperatingSystem {
     Windows,

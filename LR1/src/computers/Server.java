@@ -1,4 +1,6 @@
-package Entities;
+package computers;
+
+import Factory.ComputerType;
 
 public class Server extends DesktopComputer{
     private int square;
@@ -11,6 +13,11 @@ public class Server extends DesktopComputer{
     public Server(String manufacturer, String model, double price, OperatingSystem os, int powerVoltage, int square) {
         super(manufacturer, model, price, os, powerVoltage);
         this.square = square;
+    }
+
+    @Override
+    public ComputerType getComputerType() {
+        return ComputerType.SERVER;
     }
 
     public String toString() {

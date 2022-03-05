@@ -1,4 +1,6 @@
-package Entities;
+package computers;
+
+import Factory.ComputerType;
 
 public class Smartwatch extends PortableComputer {
     private boolean canControlHealth;
@@ -11,6 +13,11 @@ public class Smartwatch extends PortableComputer {
     public Smartwatch() {
         super();
         this.canControlHealth = false;
+    }
+
+    @Override
+    public ComputerType getComputerType() {
+        return ComputerType.SMARTWATCH;
     }
 
     public String toString() {

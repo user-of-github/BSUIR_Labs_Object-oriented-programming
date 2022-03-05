@@ -1,4 +1,7 @@
-package Entities;
+package computers;
+
+
+import Factory.ComputerType;
 
 public class Smartphone extends PortableComputer {
     private boolean hasGoogleApps;
@@ -13,6 +16,11 @@ public class Smartphone extends PortableComputer {
         this.hasGoogleApps = hasGapps;
     }
 
+    @Override
+    public ComputerType getComputerType() {
+        return ComputerType.SMARTPHONE;
+    }
+
     public String toString() {
         return String.format(
                 "%s\nHas Google Apps: %b",
@@ -21,3 +29,4 @@ public class Smartphone extends PortableComputer {
         );
     }
 }
+

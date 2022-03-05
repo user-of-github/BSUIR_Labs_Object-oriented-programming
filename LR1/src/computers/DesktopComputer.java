@@ -1,4 +1,4 @@
-package Entities;
+package computers;
 
 public abstract class DesktopComputer extends Computer {
     private int powerVoltage;

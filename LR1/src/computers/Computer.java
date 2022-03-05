@@ -1,4 +1,6 @@
-package Entities;
+package computers;
+
+import Factory.ComputerType;
 
 public abstract class Computer {
     protected static final String DefaultCurrency = "BYN";
@@ -39,6 +41,12 @@ public abstract class Computer {
     public void setOperatingSystem(OperatingSystem operatingSystem) {
         this.operatingSystem = operatingSystem;
     }
+
+    public double GetPrice() {
+        return this.price;
+    }
+
+    public abstract ComputerType getComputerType();
 
     public String toString() {
         return String.format(

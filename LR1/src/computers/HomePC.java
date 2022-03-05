@@ -1,4 +1,6 @@
-package Entities;
+package computers;
+
+import Factory.ComputerType;
 
 public class HomePC extends DesktopComputer {
     private int comfortRating;
@@ -11,6 +13,11 @@ public class HomePC extends DesktopComputer {
     public HomePC(String manufacturer, String model, double price, OperatingSystem os, int powerVoltage, int comfortRating) {
         super(manufacturer, model, price, os, powerVoltage);
         this.comfortRating = comfortRating;
+    }
+
+    @Override
+    public ComputerType getComputerType() {
+        return ComputerType.HOME_PC;
     }
 
     public String toString() {

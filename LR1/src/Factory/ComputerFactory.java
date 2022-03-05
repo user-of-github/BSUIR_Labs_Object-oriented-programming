@@ -1,18 +1,20 @@
-import Entities.*;
+package Factory;
+
+import computers.*;
 
 
 public class ComputerFactory {
-    public static Computer CreateComputer(ComputerType type) {
+    public static Computer createComputer(ComputerType type) {
         switch (type) {
-            case HomePC:
+            case HOME_PC:
                 return new HomePC();
-            case Server:
+            case SERVER:
                 return new Server();
-            case Smartwatch:
+            case SMARTWATCH:
                 return new Smartwatch();
-            case Smartphone:
+            case SMARTPHONE:
                 return new Smartphone();
-            case Laptop:
+            case LAPTOP:
                 return new Laptop();
             default:
                 throw new RuntimeException("Unhandled error. Unknown computer's type");
