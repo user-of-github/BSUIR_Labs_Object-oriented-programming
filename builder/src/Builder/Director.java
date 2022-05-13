@@ -9,4 +9,12 @@ public class Director {
     public void buildBudgetHousing(Builder builder) {
         builder.setFloorsCount(1).setRoomsCount(2).setWindowsCount(4).setDoorsCount(2);
     }
+
+    public void buildOneFlooredBuilding(Builder builder) {
+        builder.setFloorsCount(1);
+    }
+
+    public void buildPooledBuilding(Builder builder) {
+        builder.addSwimmingPool();
+    }
 }

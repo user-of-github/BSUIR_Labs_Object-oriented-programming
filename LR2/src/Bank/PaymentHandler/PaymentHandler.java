@@ -15,7 +15,7 @@ public abstract class PaymentHandler {
         return temp;
     }
 
-    public abstract int getTotalRatioForPayment(int startSum);
+    public abstract int getTotalRatioForPayment(int startRatio);
 
     protected int checkNext(int startRatio) {
         return this.next == null ? startRatio : next.getTotalRatioForPayment(startRatio);

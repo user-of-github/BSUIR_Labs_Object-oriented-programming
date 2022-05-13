@@ -6,12 +6,13 @@ import Bank.PaymentResponseStatus;
 
 public class TestPayment {
     public static void main(String[] args) {
-        //TestPayment.showExampleWithDiscounts();
-        TestPayment.showExampleWithTaxes();
+        TestPayment.showExampleWithDiscounts();
+        //TestPayment.showExampleWithTaxes();
     }
 
     private static void showExampleWithDiscounts() {
         PaymentResponseStatus paymentStatus;
+
         var studentDiscount = new PreferentialPaymentHandler(20);
         var excellentStudentDiscount = new PreferentialPaymentHandler(10);
         var competitionWinnerDiscount = new PreferentialPaymentHandler(5);
